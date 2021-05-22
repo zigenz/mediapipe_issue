@@ -4,7 +4,8 @@ The SPEQS ETT is comprised of a number of individual projects, namely:
 * Google MediaPipe
 
 # Getting Started (TODO: Explain better!)
-* Clone the repo
+* Clone the repo using the following command:
+  * git clone --recurse-submodules <repo_location_>
 * Generate the AAR ()
 
 # Build and Test
