@@ -20,9 +20,9 @@ import com.google.mediapipe.components.PermissionHelper;
 import com.google.mediapipe.framework.AndroidAssetUtil;
 import com.google.mediapipe.glutil.EglManager;
 
-/** Main activity of MediaPipe basic app. */
+/** Base MainActivity for Optical Intelligence ETT. */
 public class MainActivityBase extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivityBase";
 
     // Flips the camera-preview frames vertically by default, before sending them into FrameProcessor
     // to be processed in a MediaPipe graph, and flips the processed frames back when they are
