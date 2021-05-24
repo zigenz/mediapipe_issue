@@ -5,7 +5,13 @@ SOURCE_BUILD_FILE_NAME="BUILD.copy_to_dest"
 TARGET_FOLDER_NAME="mediapipe/examples/android/src/java/com/google/mediapipe/apps/mediapipe_aar"
 TARGET_ROOT_PATH="${PWD}/../third_party/mediapipe"
 TARGET_PATH="${TARGET_ROOT_PATH}/${TARGET_FOLDER_NAME}"
+BINARY_GRAPH_PATH_NAME="mediapipe/graphs/face_detection"
+BINARY_GRAPH_OBJ_NAME="face_detection_mobile_gpu"
 AAR_NAME="speqs_mediapipe_aar"
+TENSORFLOW_FILES=(
+    "mediapipe/modules/face_landmark/face_landmark.tflite"
+    "mediapipe/modules/face_detection/face_detection_front.tflite"
+)
 
 function clean()
 {
@@ -59,12 +65,40 @@ if [ $? -ne 0 ]; then
     exit 1;
 fi
 
-# copy to local bin folder
-if !( test -f "${SOURCE_DIR}/bin" ); then
+# create local bin folder
+if !( test -d "${SOURCE_DIR}/bin" ); then
     mkdir "${SOURCE_DIR}/bin"
     echo "Created folder: ${SOURCE_DIR}/bin"
 fi
 
-cp "${TARGET_ROOT_PATH}/bazel-bin/${TARGET_FOLDER_NAME}/${AAR_NAME}.aar" "${SOURCE_DIR}/bin/"
+# create local bin folder
+if !( test -d "${SOURCE_DIR}/bin/libs" ); then
+    mkdir "${SOURCE_DIR}/bin/libs"
+    echo "Created folder: ${SOURCE_DIR}/bin/libs"
+fi
+
+cp -f "${TARGET_ROOT_PATH}/bazel-bin/${TARGET_FOLDER_NAME}/${AAR_NAME}.aar" "${SOURCE_DIR}/bin/libs/"
+
+# now build the binary graph
+bazel build -c opt "//${BINARY_GRAPH_PATH_NAME}:${BINARY_GRAPH_OBJ_NAME}_binary_graph"
+if [ $? -ne 0 ]; then
+    echo "Unable to build binary graph!"
+    clean
+    exit 1;
+fi
+
+# create local assets folder
+if !( test -d "${SOURCE_DIR}/bin/assets" ); then
+    mkdir "${SOURCE_DIR}/bin/assets"
+    echo "Created folder: ${SOURCE_DIR}/bin/assets"
+fi
+
+# copy to local bin/assets folder
+cp -f "${TARGET_ROOT_PATH}/bazel-bin/${BINARY_GRAPH_PATH_NAME}/${BINARY_GRAPH_OBJ_NAME}.binarypb" "${SOURCE_DIR}/bin/assets/"
+
+# copy reamining assets
+for f in ${TENSORFLOW_FILES[@]}; do
+  cp -f "${TARGET_ROOT_PATH}/${f}" "${SOURCE_DIR}/bin/assets/"
+done
 
 exit 0

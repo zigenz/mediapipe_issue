@@ -2,5 +2,5 @@ load("@mediapipe//mediapipe/java/com/google/mediapipe:mediapipe_aar.bzl", "media
 
 mediapipe_aar(
     name = "speqs_mediapipe_aar",
-    calculators = ["@mediapipe//mediapipe/graphs/face_detection:mobile_calculators"],
+    calculators = ["@mediapipe//mediapipe/graphs/face_mesh:mobile_calculators"],
 )
