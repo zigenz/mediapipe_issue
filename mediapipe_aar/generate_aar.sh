@@ -5,11 +5,12 @@ SOURCE_BUILD_FILE_NAME="BUILD.copy_to_dest"
 TARGET_FOLDER_NAME="mediapipe/examples/android/src/java/com/google/mediapipe/apps/mediapipe_aar"
 TARGET_ROOT_PATH="${PWD}/../third_party/mediapipe"
 TARGET_PATH="${TARGET_ROOT_PATH}/${TARGET_FOLDER_NAME}"
-BINARY_GRAPH_PATH_NAME="mediapipe/graphs/face_mesh"
-BINARY_GRAPH_OBJ_NAME="face_mesh_mobile_gpu"
+BINARY_GRAPH_PATH_NAME="mediapipe/graphs/iris_tracking"
+BINARY_GRAPH_OBJ_NAME="iris_tracking_gpu"
 AAR_NAME="speqs_mediapipe_aar"
 TENSORFLOW_FILES=(
     "mediapipe/modules/face_landmark/face_landmark.tflite"
+    "mediapipe/modules/iris_landmark/iris_landmark.tflite"
     "mediapipe/modules/face_detection/face_detection_front.tflite"
 )
 

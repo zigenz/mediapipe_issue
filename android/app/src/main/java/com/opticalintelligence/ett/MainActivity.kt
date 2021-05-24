@@ -8,16 +8,9 @@ import com.google.mediapipe.framework.Packet
 import com.google.mediapipe.framework.PacketGetter
 import java.util.*
 
-//class MainActivity : AppCompatActivity() {
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_main)
-//    }
-//}
-
 /** Main activity of MediaPipe face mesh app.  */
 class MainActivity : MainActivityBase() {
-    protected override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val packetCreator: AndroidPacketCreator = processor.getPacketCreator()
         val inputSidePackets: MutableMap<String, Packet> = HashMap()

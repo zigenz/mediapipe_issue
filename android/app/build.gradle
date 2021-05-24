@@ -16,11 +16,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        //manifestPlaceholders["applicationId"] = "com.google.mediapipe.apps.facemeshgpu"
-        //manifestPlaceholders["appName"] = "Face Mesh"
         manifestPlaceholders["mainActivity"] = ".MainActivity"
         manifestPlaceholders["cameraFacingFront"] = "True"
-        manifestPlaceholders["binaryGraphName"] = "face_mesh_mobile_gpu.binarypb"
+        manifestPlaceholders["binaryGraphName"] = "iris_tracking_gpu.binarypb"
         manifestPlaceholders["inputVideoStreamName"] = "input_video"
         manifestPlaceholders["outputVideoStreamName"] = "output_video"
         manifestPlaceholders["flipFramesVertically"] = "True"
