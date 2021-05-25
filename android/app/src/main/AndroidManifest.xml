@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.opticalintelligence.ett">
-
     <!-- For using the camera -->
     <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature android:name="android.hardware.camera" />
 
     <application
@@ -13,20 +13,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OpticalIntelligenceETT">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:label="@string/title_activity_login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity">
 
-        <meta-data android:name="cameraFacingFront" android:value="${cameraFacingFront}"/>
-        <meta-data android:name="binaryGraphName" android:value="${binaryGraphName}"/>
-        <meta-data android:name="inputVideoStreamName" android:value="${inputVideoStreamName}"/>
-        <meta-data android:name="outputVideoStreamName" android:value="${outputVideoStreamName}"/>
-        <meta-data android:name="flipFramesVertically" android:value="${flipFramesVertically}"/>
-        <meta-data android:name="converterNumBuffers" android:value="${converterNumBuffers}"/>
+        </activity>
+
+        <meta-data
+            android:name="cameraFacingFront"
+            android:value="${cameraFacingFront}" />
+        <meta-data
+            android:name="binaryGraphName"
+            android:value="${binaryGraphName}" />
+        <meta-data
+            android:name="inputVideoStreamName"
+            android:value="${inputVideoStreamName}" />
+        <meta-data
+            android:name="outputVideoStreamName"
+            android:value="${outputVideoStreamName}" />
+        <meta-data
+            android:name="flipFramesVertically"
+            android:value="${flipFramesVertically}" />
+        <meta-data
+            android:name="converterNumBuffers"
+            android:value="${converterNumBuffers}" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
