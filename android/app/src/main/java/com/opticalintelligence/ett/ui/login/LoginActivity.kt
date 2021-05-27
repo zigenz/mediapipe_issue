@@ -15,6 +15,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import com.opticalintelligence.ett.Launcher
 import com.opticalintelligence.ett.MainActivity
 
 import com.opticalintelligence.ett.R
@@ -65,7 +66,7 @@ class LoginActivity : AppCompatActivity() {
             }
             setResult(Activity.RESULT_OK)
 
-            val intent = Intent( this,MainActivity::class.java )
+            val intent = Intent( this,Launcher::class.java )
             startActivity( intent )
 
             //Complete and destroy login activity once successful
@@ -111,7 +112,7 @@ class LoginActivity : AppCompatActivity() {
         // TODO : initiate successful logged in experience
         Toast.makeText(
             applicationContext,
-            "$welcome $displayName",
+            "$welcome, $displayName!",
             Toast.LENGTH_LONG
         ).show()
     }
