@@ -6,14 +6,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.launcher.LauncherFragment">
+
     <fragment
+        android:name="com.opticalintelligence.ett.BackgroundFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.opticalintelligence.ett.BackgroundFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="30dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Myopia Eye Test"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/gradient_button"
+            android:includeFontPadding="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text=""
+            android:textAlignment="center"
+            app:backgroundTint="@null"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_logout"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/help_btn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/gradient_button"
+            android:includeFontPadding="false"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text=""
+            android:textAlignment="center"
+            app:backgroundTint=""
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_help"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconTint="@color/white"
+            app:strokeColor="@color/black"
+            app:strokeWidth="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
