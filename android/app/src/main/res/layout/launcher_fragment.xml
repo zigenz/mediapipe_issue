@@ -37,8 +37,6 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/logout_btn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:background="@drawable/gradient_button"
@@ -53,6 +51,8 @@
             app:iconGravity="textEnd"
             app:iconPadding="0dp"
             app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/black"
             app:strokeWidth="1dp" />
 
@@ -62,22 +62,273 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toStartOf="@+id/logout_btn"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/gradient_button"
             android:includeFontPadding="false"
             android:insetTop="0dp"
             android:insetBottom="0dp"
             android:text=""
             android:textAlignment="center"
-            app:backgroundTint=""
+            app:backgroundTint="@null"
             app:cornerRadius="20dp"
             app:icon="@drawable/ic_help"
             app:iconGravity="textEnd"
             app:iconPadding="0dp"
             app:iconTint="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/logout_btn"
+            app:layout_constraintTop_toTopOf="parent"
             app:strokeColor="@color/black"
             app:strokeWidth="10dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/person_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="20dp"
+            android:outlineAmbientShadowColor="@color/cardview_dark_background"
+            app:cardBackgroundColor="#7f000000"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/help_btn">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/header_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="12dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mugshot"
+                        android:layout_width="106dp"
+                        android:layout_height="106dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:elevation="12dp"
+                        app:cardCornerRadius="53dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/steven_daw" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/mugshot"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="Steven Daw"
+                            android:textColor="@color/white"
+                            android:textSize="24dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="steven.daw@speqs.com"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/username" />
+
+                        <TextView
+                            android:id="@+id/dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:text="1st Jan 1965"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/email" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#00000000"
+                    android:padding="12dp"
+                    android:stretchColumns="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/header_block">
+
+                    <TableRow>
+
+                        <View
+                            android:layout_width="12dp"
+                            android:layout_height="0dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            style="@style/HDivider"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingVertical="9dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:textFontWeight="400"
+                                android:text="Licence"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:text="1.01"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="14dp" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:text="31 Dec 2019"
+                                android:textColor="@color/white"
+                                android:textFontWeight="400"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+
+                        <View
+                            style="@style/VDivider"
+                            android:layout_weight="0" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingVertical="9dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:textFontWeight="400"
+                                android:text="Joined on"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:text="30 Jan 2019"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+
+                        <View style="@style/VDivider" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:paddingVertical="9dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:textFontWeight="400"
+                                android:text="Last updated"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/poppins"
+                                android:text="30 Jan 2021"
+                                android:textColor="@color/white"
+                                android:textFontWeight="700"
+                                android:textSize="14dp" />
+
+                        </LinearLayout>
+                    </TableRow>
+
+
+                </TableLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
