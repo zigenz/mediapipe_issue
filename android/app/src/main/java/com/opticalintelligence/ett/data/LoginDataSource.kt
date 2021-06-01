@@ -11,7 +11,7 @@ class LoginDataSource {
     fun login(username: String, password: String): Result<LoggedInUser> {
         return try {
             // TODO: handle loggedInUser authentication
-            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Eyeght Esther")
+            val fakeUser = LoggedInUser(java.util.UUID.randomUUID().toString(), "Steven Daw")
             Result.Success(fakeUser)
         } catch (e: Throwable) {
             Result.Error(IOException("Error logging in", e))
