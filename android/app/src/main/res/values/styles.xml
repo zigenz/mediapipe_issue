@@ -12,4 +12,9 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">#1fffffff</item>
     </style>
+
+    <style name="Widget.Theme.OpticalIntelligenceETT.MyView" parent="">
+        <item name="android:background">@color/gray_400</item>
+        <item name="primaryColor">@color/light_blue_400</item>
+    </style>
 </resources>

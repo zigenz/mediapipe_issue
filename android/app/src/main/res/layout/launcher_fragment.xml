@@ -218,9 +218,9 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/poppins"
-                                android:textFontWeight="400"
                                 android:text="Licence"
                                 android:textColor="@color/white"
+                                android:textFontWeight="400"
                                 android:textSize="14dp"
 
                                 />
@@ -235,6 +235,7 @@
                                 android:textColor="@color/white"
                                 android:textFontWeight="700"
                                 android:textSize="14dp" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -266,9 +267,9 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/poppins"
-                                android:textFontWeight="400"
                                 android:text="Joined on"
                                 android:textColor="@color/white"
+                                android:textFontWeight="400"
                                 android:textSize="14dp"
 
                                 />
@@ -302,11 +303,10 @@
                                 android:layout_gravity="center_horizontal"
                                 android:layout_weight="1"
                                 android:fontFamily="@font/poppins"
-                                android:textFontWeight="400"
                                 android:text="Last updated"
                                 android:textColor="@color/white"
+                                android:textFontWeight="400"
                                 android:textSize="14dp"
-
                                 />
 
                             <TextView
@@ -327,6 +327,109 @@
                 </TableLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/id_launcher_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:outlineAmbientShadowColor="@color/cardview_dark_background"
+            app:cardBackgroundColor="#7f000000"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/person_info">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <com.opticalintelligence.ett.ui.LauncherButton
+                    style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    app:fontSize="24sp"
+                    android:textFontWeight="700"
+                    app:image="@drawable/ic_separation"
+                    app:leaderWidth="50dp"
+                    app:primaryColor="#fff31d31"
+                    app:radius="10dp"
+                    app:textIndent="10dp"
+                    app:leaderPadding="8dp"
+                    app:text="Pupil Separation" />
+
+                <com.opticalintelligence.ett.ui.LauncherButton
+                    style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="20dp"
+                    app:fontSize="24sp"
+                    android:textFontWeight="700"
+                    app:image="@drawable/ic_eye"
+                    app:leaderWidth="50dp"
+                    app:primaryColor="#fff31d31"
+                    app:radius="10dp"
+                    app:textIndent="10dp"
+                    app:leaderPadding="8dp"
+                    app:text="Eye Test" />
+
+                <com.opticalintelligence.ett.ui.LauncherButton
+                    style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="20dp"
+                    app:fontSize="24sp"
+                    android:textFontWeight="700"
+                    app:image="@drawable/ic_profiles"
+                    app:leaderWidth="50dp"
+                    app:primaryColor="#fff31d31"
+                    app:radius="10dp"
+                    app:textIndent="10dp"
+                    app:leaderPadding="8dp"
+                    app:text="Profiles" />
+
+                <com.opticalintelligence.ett.ui.LauncherButton
+                    style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="20dp"
+                    app:fontSize="24sp"
+                    android:textFontWeight="700"
+                    app:image="@drawable/ic_shopping_cart"
+                    app:leaderWidth="50dp"
+                    app:primaryColor="#fff31d31"
+                    app:radius="10dp"
+                    app:textIndent="10dp"
+                    app:leaderPadding="8dp"
+                    app:text="Buy Glasses" />
+
+                <com.opticalintelligence.ett.ui.LauncherButton
+                    style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="20dp"
+                    app:fontSize="24sp"
+                    android:textFontWeight="700"
+                    app:image="@drawable/ic_settings"
+                    app:leaderWidth="50dp"
+                    app:primaryColor="#fff31d31"
+                    app:radius="10dp"
+                    app:textIndent="10dp"
+                    app:leaderPadding="8dp"
+                    app:text="Settings" />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
