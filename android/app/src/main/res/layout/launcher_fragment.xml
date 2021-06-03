@@ -352,6 +352,7 @@
                 android:orientation="vertical">
 
                 <com.opticalintelligence.ett.ui.LauncherButton
+                    android:id="@+id/pupil_separation_btn"
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -367,6 +368,7 @@
                     app:text="Pupil Separation" />
 
                 <com.opticalintelligence.ett.ui.LauncherButton
+                    android:id="@+id/eye_test_btn"
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

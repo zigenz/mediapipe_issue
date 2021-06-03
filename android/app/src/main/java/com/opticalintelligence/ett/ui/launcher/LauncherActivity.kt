@@ -1,17 +1,16 @@
-package com.opticalintelligence.ett
+package com.opticalintelligence.ett.ui.launcher
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.opticalintelligence.ett.ui.launcher.LauncherFragment
+import com.opticalintelligence.ett.R
 
-class Launcher : AppCompatActivity() {
+class LauncherActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // don't want to see the action bar
         supportActionBar?.hide();
-
 
         setContentView(R.layout.launcher_activity)
         if (savedInstanceState == null) {

@@ -16,7 +16,6 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        manifestPlaceholders["mainActivity"] = ".MainActivity"
         manifestPlaceholders["cameraFacingFront"] = "True"
         manifestPlaceholders["binaryGraphName"] = "iris_tracking_gpu.binarypb"
         manifestPlaceholders["inputVideoStreamName"] = "input_video"

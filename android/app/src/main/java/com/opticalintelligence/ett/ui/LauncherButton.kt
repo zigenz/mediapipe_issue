@@ -174,6 +174,7 @@ class LauncherButton : androidx.appcompat.widget.AppCompatButton {
     }
 
     private fun invalidateTextPaintAndMeasurements() {
+        //TODO: get the fontFamily and weight from the XML and apply it here!
         textPaint.let {
             it.textSize = fontSize
             it.color = primaryColor
@@ -212,6 +213,7 @@ class LauncherButton : androidx.appcompat.widget.AppCompatButton {
             style = Paint.Style.FILL
             textSize = textHeight
             color = Color.WHITE
+            fontFeatureSettings
         }
 
         secondaryPaint.shader = LinearGradient(

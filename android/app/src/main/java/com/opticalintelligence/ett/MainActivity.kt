@@ -18,10 +18,10 @@ class MainActivity : MainActivityBase() {
 
         // onCameraStarted gets called each time the activity resumes, but we only want to do this once.
         if (!haveAddedSidePackets) {
-            val focalLength: Float = cameraHelper.getFocalLengthPixels()
+            val focalLength: Float = cameraHelper.focalLengthPixels
             if (focalLength != Float.MIN_VALUE) {
                 val focalLengthSidePacket: Packet =
-                    processor.getPacketCreator().createFloat32(focalLength)
+                    processor.packetCreator.createFloat32(focalLength)
                 val inputSidePackets: MutableMap<String, Packet> = HashMap()
                 inputSidePackets[FOCAL_LENGTH_STREAM_NAME] =
                     focalLengthSidePacket
