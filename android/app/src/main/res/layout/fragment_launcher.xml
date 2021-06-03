@@ -8,7 +8,7 @@
     tools:context=".ui.launcher.LauncherFragment">
 
     <fragment
-        android:name="com.opticalintelligence.ett.BackgroundFragment"
+        android:name="com.opticalintelligence.ett.ui.components.BackgroundFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -351,7 +351,7 @@
                 android:padding="20dp"
                 android:orientation="vertical">
 
-                <com.opticalintelligence.ett.ui.LauncherButton
+                <com.opticalintelligence.ett.ui.components.LauncherButton
                     android:id="@+id/pupil_separation_btn"
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
@@ -367,7 +367,7 @@
                     app:leaderPadding="8dp"
                     app:text="Pupil Separation" />
 
-                <com.opticalintelligence.ett.ui.LauncherButton
+                <com.opticalintelligence.ett.ui.components.LauncherButton
                     android:id="@+id/eye_test_btn"
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
@@ -384,7 +384,7 @@
                     app:leaderPadding="8dp"
                     app:text="Eye Test" />
 
-                <com.opticalintelligence.ett.ui.LauncherButton
+                <com.opticalintelligence.ett.ui.components.LauncherButton
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -400,7 +400,7 @@
                     app:leaderPadding="8dp"
                     app:text="Profiles" />
 
-                <com.opticalintelligence.ett.ui.LauncherButton
+                <com.opticalintelligence.ett.ui.components.LauncherButton
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -416,7 +416,7 @@
                     app:leaderPadding="8dp"
                     app:text="Buy Glasses" />
 
-                <com.opticalintelligence.ett.ui.LauncherButton
+                <com.opticalintelligence.ett.ui.components.LauncherButton
                     style="@style/Widget.Theme.OpticalIntelligenceETT.MyView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

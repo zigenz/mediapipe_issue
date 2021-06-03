@@ -1,4 +1,4 @@
-package com.opticalintelligence.ett;
+package com.opticalintelligence.ett.ui.eye_test;
 
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -19,9 +19,10 @@ import com.google.mediapipe.components.FrameProcessor;
 import com.google.mediapipe.components.PermissionHelper;
 import com.google.mediapipe.framework.AndroidAssetUtil;
 import com.google.mediapipe.glutil.EglManager;
+import com.opticalintelligence.ett.R;
 
 /** Base MainActivity for Optical Intelligence ETT. */
-public class MainActivityBase extends AppCompatActivity {
+public class EyeTestActivityBase extends AppCompatActivity {
     private static final String TAG = "MainActivityBase";
 
     // Flips the camera-preview frames vertically by default, before sending them into FrameProcessor
@@ -108,7 +109,7 @@ public class MainActivityBase extends AppCompatActivity {
     // Used to obtain the content view for this application. If you are extending this class, and
     // have a custom layout, override this method and return the custom layout.
     protected int getContentViewLayoutResId() {
-        return R.layout.activity_main;
+        return R.layout.activity_eye_test;
     }
 
     @Override

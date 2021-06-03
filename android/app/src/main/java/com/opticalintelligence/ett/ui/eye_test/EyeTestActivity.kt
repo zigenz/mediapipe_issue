@@ -1,4 +1,4 @@
-package com.opticalintelligence.ett
+package com.opticalintelligence.ett.ui.eye_test
 
 import android.graphics.SurfaceTexture
 import android.os.Bundle
@@ -11,7 +11,7 @@ import java.util.*
 
 
 /** Main activity of MediaPipe iris tracking app.  */
-class MainActivity : MainActivityBase() {
+class EyeTestActivity : EyeTestActivityBase() {
     private var haveAddedSidePackets = false
     override fun onCameraStarted(surfaceTexture: SurfaceTexture?) {
         super.onCameraStarted(surfaceTexture)

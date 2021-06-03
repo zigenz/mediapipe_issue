@@ -12,7 +12,7 @@ class LauncherActivity : AppCompatActivity() {
         // don't want to see the action bar
         supportActionBar?.hide();
 
-        setContentView(R.layout.launcher_activity)
+        setContentView(R.layout.activity_launcher)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, LauncherFragment.newInstance())

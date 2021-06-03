@@ -1,4 +1,4 @@
-package com.opticalintelligence.ett.ui
+package com.opticalintelligence.ett.ui.components
 
 import android.content.Context
 import android.graphics.*

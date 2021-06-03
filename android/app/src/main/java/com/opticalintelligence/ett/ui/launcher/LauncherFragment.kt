@@ -8,9 +8,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.opticalintelligence.ett.MainActivity
+import com.opticalintelligence.ett.ui.eye_test.EyeTestActivity
 import com.opticalintelligence.ett.R
-import com.opticalintelligence.ett.ui.LauncherButton
+import com.opticalintelligence.ett.ui.components.LauncherButton
 
 class LauncherFragment : Fragment() {
 
@@ -26,13 +26,13 @@ class LauncherFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val view = inflater.inflate(R.layout.launcher_fragment, container, false)
+        val view = inflater.inflate(R.layout.fragment_launcher, container, false)
 
         val invokeEyeTest = view?.findViewById<LauncherButton>(R.id.eye_test_btn)
 
         invokeEyeTest?.setOnClickListener {
             Log.v(TAG, "Eye Test button clicked!")
-            val intent = Intent( this.activity, MainActivity::class.java )
+            val intent = Intent( this.activity, EyeTestActivity::class.java )
             startActivity( intent )
         }
 
