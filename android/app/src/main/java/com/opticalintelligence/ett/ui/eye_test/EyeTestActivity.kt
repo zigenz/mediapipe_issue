@@ -18,14 +18,14 @@ class EyeTestActivity : EyeTestActivityBase() {
 
         // onCameraStarted gets called each time the activity resumes, but we only want to do this once.
         if (!haveAddedSidePackets) {
-            val focalLength: Float = cameraHelper.focalLengthPixels
+            val focalLength: Float = cameraHelper!!.focalLengthPixels
             if (focalLength != Float.MIN_VALUE) {
                 val focalLengthSidePacket: Packet =
-                    processor.packetCreator.createFloat32(focalLength)
+                    processor!!.packetCreator.createFloat32(focalLength)
                 val inputSidePackets: MutableMap<String, Packet> = HashMap()
                 inputSidePackets[FOCAL_LENGTH_STREAM_NAME] =
                     focalLengthSidePacket
-                processor.setInputSidePackets(inputSidePackets)
+                processor!!.setInputSidePackets(inputSidePackets)
             }
             haveAddedSidePackets = true
         }
@@ -37,7 +37,7 @@ class EyeTestActivity : EyeTestActivityBase() {
         // To show verbose logging, run:
         // adb shell setprop log.tag.MainActivity VERBOSE
         if (Log.isLoggable(TAG, Log.VERBOSE)) {
-            processor.addPacketCallback(
+            processor!!.addPacketCallback(
                 OUTPUT_LANDMARKS_STREAM_NAME
             ) { packet ->
                 val landmarksRaw = PacketGetter.getProtoBytes(packet)
