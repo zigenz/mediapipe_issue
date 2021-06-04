@@ -114,7 +114,7 @@ open class EyeTestActivityBase : AppCompatActivity() {
 
     // Used to obtain the content view for this application. If you are extending this class, and
     // have a custom layout, override this method and return the custom layout.
-    protected val contentViewLayoutResId: Int
+    protected open val contentViewLayoutResId: Int
         protected get() = R.layout.activity_eye_test
 
     override fun onResume() {

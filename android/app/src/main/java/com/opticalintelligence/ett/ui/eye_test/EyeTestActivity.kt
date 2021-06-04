@@ -7,6 +7,7 @@ import com.google.mediapipe.formats.proto.LandmarkProto.NormalizedLandmarkList
 import com.google.mediapipe.framework.Packet
 import com.google.mediapipe.framework.PacketGetter
 import com.google.protobuf.InvalidProtocolBufferException
+import com.opticalintelligence.ett.R
 import java.util.*
 
 
@@ -72,6 +73,9 @@ class EyeTestActivity : EyeTestActivityBase() {
             }
         }
     }
+
+    override val contentViewLayoutResId: Int
+         get() = R.layout.activity_eye_test
 
     companion object {
         private const val TAG = "MainActivity"
