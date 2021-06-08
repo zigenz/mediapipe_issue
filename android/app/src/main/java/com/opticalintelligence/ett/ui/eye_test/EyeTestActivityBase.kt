@@ -23,7 +23,7 @@ import com.opticalintelligence.ett.R
 /** Base MainActivity for Optical Intelligence ETT.  */
 open class EyeTestActivityBase : AppCompatActivity() {
     companion object {
-        private const val TAG = "MainActivityBase"
+        private const val TAG = "EyeTestActivityBase"
 
         // Flips the camera-preview frames vertically by default, before sending them into FrameProcessor
         // to be processed in a MediaPipe graph, and flips the processed frames back when they are
@@ -81,6 +81,7 @@ open class EyeTestActivityBase : AppCompatActivity() {
         // don't want to see the action bar
         this.supportActionBar!!.hide()
         setContentView(contentViewLayoutResId)
+
         try {
             manifestApplicationInfo =
                 packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
@@ -124,7 +125,10 @@ open class EyeTestActivityBase : AppCompatActivity() {
             manifestApplicationInfo!!.metaData.getInt("converterNumBuffers", NUM_BUFFERS)
         )
         converter!!.setFlipY(
-            manifestApplicationInfo!!.metaData.getBoolean("flipFramesVertically", FLIP_FRAMES_VERTICALLY)
+            manifestApplicationInfo!!.metaData.getBoolean(
+                "flipFramesVertically",
+                FLIP_FRAMES_VERTICALLY
+            )
         )
         converter!!.setConsumer(processor)
         if (PermissionHelper.cameraPermissionsGranted(this)) {

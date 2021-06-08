@@ -78,16 +78,14 @@ class EyeTestActivity : EyeTestActivityBase() {
          get() = R.layout.activity_eye_test
 
     companion object {
-        private const val TAG = "MainActivity"
+        private const val TAG = "EyeTestActivity"
         private const val FOCAL_LENGTH_STREAM_NAME = "focal_length_pixel"
         private const val OUTPUT_LANDMARKS_STREAM_NAME = "face_landmarks_with_iris"
         private fun getLandmarksDebugString(landmarks: NormalizedLandmarkList): String {
-            var landmarkIndex = 0
             var landmarksString = ""
-            for (landmark in landmarks.landmarkList) {
+            for ((landmarkIndex, landmark) in landmarks.landmarkList.withIndex()) {
                 landmarksString += """		Landmark[$landmarkIndex]: (${landmark.x}, ${landmark.y}, ${landmark.z})
 """
-                ++landmarkIndex
             }
             return landmarksString
         }
