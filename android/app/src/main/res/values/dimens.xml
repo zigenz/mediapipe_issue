@@ -11,4 +11,7 @@
     <dimen name="activity_padding_vertical">30dp</dimen>
     <dimen name="font_size_header">24dp</dimen>
     <dimen name="font_weight_header">400</dimen>
+    <dimen name="font_size_context_heading">18dp</dimen>
+    <dimen name="font_size_context_instruction_heading">24dp</dimen>
+    <dimen name="font_size_context_instruction_detail">18dp</dimen>
 </resources>

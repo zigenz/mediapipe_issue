@@ -3,6 +3,10 @@ package com.opticalintelligence.ett.ui.eye_test
 import android.graphics.SurfaceTexture
 import android.os.Bundle
 import android.util.Log
+import android.widget.FrameLayout
+import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.google.mediapipe.formats.proto.LandmarkProto.NormalizedLandmarkList
 import com.google.mediapipe.framework.Packet
 import com.google.mediapipe.framework.PacketGetter
@@ -34,6 +38,13 @@ class EyeTestActivity : EyeTestActivityBase() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        //val context = findViewById<FrameLayout>(R.id.context)
+        if ( null == savedInstanceState ) {
+            val newFragment = EyeTestFragment()
+            val ft = supportFragmentManager.beginTransaction()
+            ft.add( R.id.context, newFragment ).commit()
+        }
 
         // To show verbose logging, run:
         // adb shell setprop log.tag.MainActivity VERBOSE
