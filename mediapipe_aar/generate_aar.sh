@@ -11,7 +11,7 @@ AAR_NAME="speqs_mediapipe_aar"
 TENSORFLOW_FILES=(
     "mediapipe/modules/face_landmark/face_landmark.tflite"
     "mediapipe/modules/iris_landmark/iris_landmark.tflite"
-    "mediapipe/modules/face_detection/face_detection_front.tflite"
+    "mediapipe/modules/face_detection/face_detection_short_range.tflite"
 )
 
 function clean()
