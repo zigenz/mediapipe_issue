@@ -1,0 +1,6 @@
+load("@mediapipe//mediapipe/java/com/google/mediapipe:mediapipe_aar.bzl", "mediapipe_aar")
+
+mediapipe_aar(
+    name = "mediapipe_aar",
+    calculators = ["@mediapipe//mediapipe/graphs/iris_tracking:iris_tracking_gpu_deps"],
+)
