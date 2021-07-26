@@ -7,7 +7,7 @@ TARGET_ROOT_PATH="${PWD}/../third_party/mediapipe"
 TARGET_PATH="${TARGET_ROOT_PATH}/${TARGET_FOLDER_NAME}"
 BINARY_GRAPH_PATH_NAME="mediapipe/graphs/iris_tracking"
 BINARY_GRAPH_OBJ_NAME="iris_tracking_gpu"
-AAR_NAME="speqs_mediapipe_aar"
+AAR_NAME="mediapipe_aar"
 TENSORFLOW_FILES=(
     "mediapipe/modules/face_landmark/face_landmark.tflite"
     "mediapipe/modules/iris_landmark/iris_landmark.tflite"
